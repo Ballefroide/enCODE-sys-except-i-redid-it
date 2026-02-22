@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Encode | build 2.5.26</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
+      
+      :root {
+        --primary: #00ff41;
+        --primary-rgb: 0, 255, 65;
+        --bg-color: #030503;
+        --surface: #0a0f0a;
+        --dim: #00ff41;
+        --shadow-color: rgba(0, 255, 65, 0.2);
+        --btn-shadow: 0px 0px 10px rgba(0, 255, 65, 0.2);
+        --radius: 2px;
+        --card-bg: #050805;
+        --header-bg: #0d1a0d;
+        --header-text: #00ff41;
+        --hover-bg: #001a00;
+        --text-color: #00ff41;
+        --btn-primary-bg: #00ff41;
+        --btn-primary-text: #000000;
+        --btn-secondary-bg: #0a110a;
+        --btn-secondary-text: #00ff41;
+      }
+
+      [data-theme="monochrome"] {
+        --primary: #000000;
+        --primary-rgb: 0, 0, 0;
+        --bg-color: #ffffff;
+        --surface: #f3f3f3;
+        --dim: #666666;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --btn-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --radius: 0px;
+        --card-bg: #ffffff;
+        --header-bg: #000000;
+        --header-text: #ffffff;
+        --hover-bg: #e5e7eb;
+        --text-color: #000000;
+        --btn-primary-bg: #000000;
+        --btn-primary-text: #ffffff;
+        --btn-secondary-bg: #ffffff;
+        --btn-secondary-text: #000000;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        overflow: hidden;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      ::-webkit-scrollbar { width: 4px; height: 4px; }
+      ::-webkit-scrollbar-track { background: var(--bg-color); }
+      ::-webkit-scrollbar-thumb { background: var(--primary); opacity: 0.3; }
+
+      .neo-shadow {
+        box-shadow: var(--btn-shadow);
+      }
+
+      .bg-grid {
+        background-image: radial-gradient(circle, var(--primary) 1px, transparent 1px);
+        background-size: 30px 30px;
+      }
+
+      .effects-disabled .bg-grid { display: none; }
+      .effects-disabled * { transition: none !important; animation: none !important; }
+
+      /* Red Team Override */
+      .red-team-active {
+        --primary: #ff003c;
+        --primary-rgb: 255, 0, 60;
+        --shadow-color: rgba(255, 0, 60, 0.2);
+        --header-bg: #1a0006;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react/jsx-runtime": "https://esm.sh/react@19.0.0/jsx-runtime",
+    "lucide-react": "https://esm.sh/lucide-react@0.475.0?deps=react@19.0.0",
+    "@google/genai": "https://esm.sh/@google/genai@1.33.0",
+    "prismjs": "https://esm.sh/prismjs@1.29.0",
+    "react-simple-code-editor": "https://esm.sh/react-simple-code-editor@0.13.1?deps=react@19.0.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.17?deps=react@19.0.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
